@@ -41,3 +41,119 @@
     <script src="script.js"></script>
 </body>
 </html>
+root: {
+    --charcoal: #1C1E1C;   /* الرمادي الغامق الفخم */
+    --orange: #E86E24;     /* البرتقالي الاستراتيجي */
+    --white: #FFFFFF;
+    --font-main: 'Tajawal', sans-serif;
+    --font-eng: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--charcoal);
+    color: var(--white);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+.container { width: 85%; max-width: 1200px; margin: 0 auto; }
+
+/* Navbar - تصميم انسيابي وشفاف */
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background: rgba(28, 30, 28, 0.95);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+.logo img { height: 45px; width: auto; }
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+
+.nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover { color: var(--orange); }
+
+.btn-cta {
+    background: var(--orange);
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 700 !important;
+}
+
+/* Hero Section - الواجهة السينمائية */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle at 10% 20%, rgba(232, 110, 36, 0.08) 0%, transparent 40%);
+}
+
+.hero-content { max-width: 800px; }
+
+.hero-tagline { 
+    font-family: var(--font-eng); 
+    color: var(--orange); 
+    letter-spacing: 4px; 
+    font-size: 0.85rem; 
+    margin-bottom: 10px; 
+}
+
+.hero-title { font-family: var(--font-eng); font-size: 1.5rem; opacity: 0.8; margin-bottom: 5px; }
+
+.hero-specialty { font-size: 4.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 700; }
+
+.dot { color: var(--orange); }
+
+.hero-desc { font-size: 1.3rem; color: #bbb; margin-bottom: 40px; max-width: 650px; }
+
+/* Buttons */
+.btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 16px 45px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-left: 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 16px 45px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(232, 110, 36, 0.2); }
+.btn-secondary:hover { background: white; color: var(--charcoal); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-specialty { font-size: 2.8rem; }
+    .nav-links { display: none; } /* يفضل إضافة قائمة موبايل لاحقاً */
+}
