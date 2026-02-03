@@ -1,159 +1,87 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Waleed | Brand Strategist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Mohamed Walid — Visual Branding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
 </head>
-<body>
 
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">
-                <img src="logo.png" alt="Mohamed Waleed Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#portfolio">الأعمال</a></li>
-                <li><a href="https://wa.me/YOUR_NUMBER" class="btn-cta">استشارة مجانية</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="bg-black text-[#F6F0E8]">
 
-    <header class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <p class="hero-tagline">STRATEGY BEFORE DESIGN</p>
-                <h1 class="hero-title">Mohamed Waleed</h1>
-                <h2 class="hero-specialty">Brand Strategist <span class="dot">.</span></h2>
-                <p class="hero-desc">متخصص في بناء الـ <strong>Brand Maps</strong> وتأسيس الهويات البصرية للشركات والمؤسسين في سوق الخليج.</p>
-                <div class="hero-btns">
-                    <a href="#portfolio" class="btn-primary">استعرض الأعمال</a>
-                    <a href="#services" class="btn-secondary">عن الاستراتيجية</a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-semibold mb-4">
+      محمد وليد
+    </h1>
+    <p class="text-lg text-gray-400 max-w-xl mb-8">
+      Visual Branding & Brand Mapping
+    </p>
+    <a href="#services" class="border border-[#F47A2A] text-[#F47A2A] px-8 py-3 rounded-full hover:bg-[#F47A2A] hover:text-black transition">
+      الخدمات
+    </a>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Philosophy -->
+  <section class="py-24 px-6 bg-[#1E1E1E] text-center">
+    <h2 class="text-3xl font-semibold mb-6">فلسفة البراند</h2>
+    <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      الهوية القوية لا تُبنى على الشكل فقط، بل على الفهم، الاستراتيجية، وخريطة واضحة لهوية البراند.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-16">الخدمات</h2>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+      <div class="bg-[#1E1E1E] p-8 rounded-2xl text-center">
+        <div class="text-[#F47A2A] text-4xl mb-6">🎨</div>
+        <h3 class="text-xl font-semibold mb-3">Visual Identity</h3>
+        <p class="text-gray-400">
+          تصميم أنظمة بصرية متكاملة تعكس شخصية البراند.
+        </p>
+      </div>
+
+      <div class="bg-[#1E1E1E] p-8 rounded-2xl text-center">
+        <div class="text-[#F47A2A] text-4xl mb-6">🧭</div>
+        <h3 class="text-xl font-semibold mb-3">Brand Map</h3>
+        <p class="text-gray-400">
+          تحديد اتجاه البراند وصوته وتجربته بالكامل.
+        </p>
+      </div>
+
+      <div class="bg-[#1E1E1E] p-8 rounded-2xl text-center">
+        <div class="text-[#F47A2A] text-4xl mb-6">✏️</div>
+        <h3 class="text-xl font-semibold mb-3">Logo System</h3>
+        <p class="text-gray-400">
+          تصميم شعارات مبنية على فكرة وليس ذوق لحظي.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-24 px-6 text-center bg-[#1E1E1E]">
+    <h2 class="text-3xl font-semibold mb-6">تواصل معي</h2>
+    <p class="text-gray-400 mb-4">للتعاون أو الاستفسار</p>
+    <a href="mailto:your@email.com" class="text-[#F47A2A] text-lg">
+      your@email.com
+    </a>
+  </section>
+
 </body>
 </html>
-root: {
-    --charcoal: #1C1E1C;   /* الرمادي الغامق الفخم */
-    --orange: #E86E24;     /* البرتقالي الاستراتيجي */
-    --white: #FFFFFF;
-    --font-main: 'Tajawal', sans-serif;
-    --font-eng: 'Montserrat', sans-serif;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: var(--charcoal);
-    color: var(--white);
-    font-family: var(--font-main);
-    line-height: 1.6;
-    text-align: right;
-    overflow-x: hidden;
-}
-
-.container { width: 85%; max-width: 1200px; margin: 0 auto; }
-
-/* Navbar - تصميم انسيابي وشفاف */
-.navbar {
-    height: 90px;
-    display: flex;
-    align-items: center;
-    background: rgba(28, 30, 28, 0.95);
-    backdrop-filter: blur(15px);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-
-.logo img { height: 45px; width: auto; }
-
-.nav-links { display: flex; list-style: none; align-items: center; }
-
-.nav-links li a {
-    color: var(--white);
-    text-decoration: none;
-    margin-right: 30px;
-    font-weight: 400;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover { color: var(--orange); }
-
-.btn-cta {
-    background: var(--orange);
-    padding: 10px 25px;
-    border-radius: 4px;
-    font-weight: 700 !important;
-}
-
-/* Hero Section - الواجهة السينمائية */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: radial-gradient(circle at 10% 20%, rgba(232, 110, 36, 0.08) 0%, transparent 40%);
-}
-
-.hero-content { max-width: 800px; }
-
-.hero-tagline { 
-    font-family: var(--font-eng); 
-    color: var(--orange); 
-    letter-spacing: 4px; 
-    font-size: 0.85rem; 
-    margin-bottom: 10px; 
-}
-
-.hero-title { font-family: var(--font-eng); font-size: 1.5rem; opacity: 0.8; margin-bottom: 5px; }
-
-.hero-specialty { font-size: 4.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 700; }
-
-.dot { color: var(--orange); }
-
-.hero-desc { font-size: 1.3rem; color: #bbb; margin-bottom: 40px; max-width: 650px; }
-
-/* Buttons */
-.btn-primary {
-    background: var(--orange);
-    color: white;
-    padding: 16px 45px;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 4px;
-    margin-left: 20px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 16px 45px;
-    text-decoration: none;
-    border-radius: 4px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(232, 110, 36, 0.2); }
-.btn-secondary:hover { background: white; color: var(--charcoal); }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-specialty { font-size: 2.8rem; }
-    .nav-links { display: none; } /* يفضل إضافة قائمة موبايل لاحقاً */
-}
