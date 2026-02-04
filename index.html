@@ -11,12 +11,66 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-  <body class="bg-[#0E0E0E] text-[#EDEDED]">
+ <style>
+  body {
+    font-family: 'Cairo', sans-serif;
+  }
 
-      font-family: 'Cairo', sans-serif;
-  
-  </style>
+  /* Card base */
+  .service-card {
+    background: #151515;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Glow effect */
+  .service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top,
+      rgba(244, 122, 42, 0.35),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  /* Hover interaction */
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Image motion */
+  .service-card img {
+    transition: transform 0.6s ease;
+  }
+
+  .service-card:hover img {
+    transform: scale(1.08) rotate(-2deg);
+  }
+
+  /* Fade in animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
 </head>
 
 <body class="bg-black text-[#F6F0E8]">
